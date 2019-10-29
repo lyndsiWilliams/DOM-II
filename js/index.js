@@ -27,6 +27,12 @@ bodyGrab.addEventListener("keydown", () => {
 })
 
 
+// keyup
+bodyGrab.addEventListener("keyup", () => {
+    bodyGrab.style.backgroundColor = "lightpink";
+})
+
+
 // wheel
 pGrab.forEach(e => {
     e.addEventListener("wheel", () => {
@@ -71,9 +77,6 @@ window.addEventListener("scroll", () => {
         e.style.filter = "drop-shadow(10px 10px)";
     })
 })
-
-
-// select
 
 
 

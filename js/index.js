@@ -24,6 +24,30 @@ bodyGrab.addEventListener("keydown", () => {
 
 // wheel
 
+const pGrab = document.querySelectorAll('p');
+
+pGrab.forEach(e => {
+    e.addEventListener("wheel", () => {
+        e.style.filter = "blur(10px)";
+    });
+})
+
+
+
+// let scale = 1;
+
+// function zoom(e) {
+//     // e.preventDefault();
+
+//     scale += e.deltaY * -0.01;
+
+//     // Restrict scale
+//     scale = Math.min(Math.max(.125, scale), 4);
+
+//     // Apply scale transform
+//     pGrab.style.transform = `scale(${scale})`;
+// }
+
 
 // drag / drop
 

@@ -55,6 +55,11 @@ window.addEventListener("resize", () => {
 
 
 // scroll
+window.addEventListener("scroll", () => {
+    imgGrab.forEach(e => {
+        e.style.filter = "drop-shadow(10px 10px)";
+    })
+})
 
 
 // select

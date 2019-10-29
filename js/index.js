@@ -7,8 +7,9 @@ const pGrab = document.querySelectorAll('p');
 const navGrab = document.querySelectorAll('.nav-link');
 const h2Grab = document.querySelectorAll('h2');
 const h4Grab = document.querySelectorAll('h4');
+const btnGrab = document.querySelectorAll('.btn');
 
-// mouseover
+// mouseenter/mouseleave
 imgGrab.forEach(e => {
     e.addEventListener("mouseenter", () => {
         e.style.filter = "invert(100%)";
@@ -34,16 +35,26 @@ pGrab.forEach(e => {
 })
 
 
-// drag / drop
+// click
+btnGrab.forEach(e => {
+    e.addEventListener("click", () => {
+        e.style.backgroundColor = "rebeccapurple";
+    })
+})
+
+
+// auxclick
+btnGrab.forEach(e => {
+    e.addEventListener("auxclick", () => {
+        e.style.backgroundColor = "green";
+    })
+})
 
 
 // load
 window.addEventListener('load', (event) => {
     console.log('The page is fully loaded!');
 });
-
-
-// focus
 
 
 // resize
@@ -63,6 +74,7 @@ window.addEventListener("scroll", () => {
 
 
 // select
+
 
 
 // dblclick

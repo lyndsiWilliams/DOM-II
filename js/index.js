@@ -1,8 +1,14 @@
 // Your code goes here
 
-// mouseover
+// The Grabs
 const imgGrab = document.querySelectorAll('img');
+const bodyGrab = document.querySelector('body');
+const pGrab = document.querySelectorAll('p');
+const navGrab = document.querySelectorAll('.nav-link');
+const h2Grab = document.querySelectorAll('h2');
+const h4Grab = document.querySelectorAll('h4');
 
+// mouseover
 imgGrab.forEach(e => {
     e.addEventListener("mouseenter", () => {
         e.style.filter = "invert(100%)";
@@ -15,17 +21,12 @@ imgGrab.forEach(e => {
 
 
 // keydown
-const bodyGrab = document.querySelector('body');
-
 bodyGrab.addEventListener("keydown", () => {
     bodyGrab.style.backgroundColor = "lightblue";
 })
 
 
 // wheel
-
-const pGrab = document.querySelectorAll('p');
-
 pGrab.forEach(e => {
     e.addEventListener("wheel", () => {
         e.style.filter = "blur(10px)";
@@ -33,32 +34,24 @@ pGrab.forEach(e => {
 })
 
 
-
-// let scale = 1;
-
-// function zoom(e) {
-//     // e.preventDefault();
-
-//     scale += e.deltaY * -0.01;
-
-//     // Restrict scale
-//     scale = Math.min(Math.max(.125, scale), 4);
-
-//     // Apply scale transform
-//     pGrab.style.transform = `scale(${scale})`;
-// }
-
-
 // drag / drop
 
 
 // load
+window.addEventListener('load', (event) => {
+    console.log('The page is fully loaded!');
+});
 
 
 // focus
 
 
 // resize
+window.addEventListener("resize", () => {
+    imgGrab.forEach(e => {
+        e.src = "https://images.unsplash.com/photo-1530210124550-912dc1381cb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80";
+    })
+})
 
 
 // scroll
@@ -68,8 +61,6 @@ pGrab.forEach(e => {
 
 
 // dblclick
-const h2Grab = document.querySelectorAll('h2');
-
 h2Grab.forEach(e => {
     e.addEventListener("dblclick", () => {
         e.textContent = "DON'T DOUBLE CLICK ME!!!";

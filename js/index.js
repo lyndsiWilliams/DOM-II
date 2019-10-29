@@ -8,6 +8,7 @@ const navGrab = document.querySelectorAll('.nav-link');
 const h2Grab = document.querySelectorAll('h2');
 const h4Grab = document.querySelectorAll('h4');
 const btnGrab = document.querySelectorAll('.btn');
+const mainNavGrab = document.querySelector('.main-navigation');
 
 // mouseenter/mouseleave
 imgGrab.forEach(e => {
@@ -88,7 +89,22 @@ h2Grab.forEach(e => {
 })
 
 
+// Preventing propogation
+mainNavGrab.addEventListener("click", () => {
+    mainNavGrab.style.backgroundColor = "green";
+})
+
+navGrab.forEach(e => {
+    e.addEventListener("click", (ev) => {
+        e.style.backgroundColor = "blue";
+        ev.stopPropagation();
+    })
+})
+
+
 // Stop navigation items from refreshing the page
 navGrab.forEach(e => {
-    e.preventDefault();
+    e.addEventListener("click", (e) => {
+        e.preventDefault();
+    })
 })

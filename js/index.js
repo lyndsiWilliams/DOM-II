@@ -86,3 +86,9 @@ h2Grab.forEach(e => {
         e.textContent = "DON'T DOUBLE CLICK ME!!!";
     })
 })
+
+
+// Stop navigation items from refreshing the page
+navGrab.forEach(e => {
+    e.preventDefault();
+})

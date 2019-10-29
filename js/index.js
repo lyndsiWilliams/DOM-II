@@ -5,6 +5,7 @@ const imgGrab = document.querySelectorAll('img');
 const bodyGrab = document.querySelector('body');
 const pGrab = document.querySelectorAll('p');
 const navGrab = document.querySelectorAll('.nav-link');
+const h1Grab = document.querySelector('h1');
 const h2Grab = document.querySelectorAll('h2');
 const h4Grab = document.querySelectorAll('h4');
 const btnGrab = document.querySelectorAll('.btn');
@@ -107,4 +108,10 @@ navGrab.forEach(e => {
     e.addEventListener("click", (e) => {
         e.preventDefault();
     })
+})
+
+
+// Stretch! Bye bye h1!
+h1Grab.addEventListener("mouseenter", (e) => {
+    TweenMax.to(h1Grab, 2.5, { ease: Bounce.easeOut, y: -500 });
 })
